@@ -8,6 +8,20 @@
 
 class Figure {
 
+private:
+    int sizeOfFigure = 5;
+    char charOfFigure = '*';
+
+public:
+    Figure(){
+
+    }
+
+    int getSizeOfFigure();
+    void setSizeOfFigure(int sizeOfFigure);
+    char getCharOfFigure();
+    void setCharOfFigure(char charOfFigure);
+
 };
 
 

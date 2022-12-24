@@ -1,6 +1,9 @@
 #include <iostream>
+#include "Program.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Program program;
+    int z;
+    std::cin >> z;
     return 0;
 }
