@@ -55,11 +55,11 @@ build CMakeFiles/Projekt.dir/main.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users
   OBJECT_DIR = CMakeFiles\Projekt.dir
   OBJECT_FILE_DIR = CMakeFiles\Projekt.dir
 
-build CMakeFiles/Projekt.dir/Figure.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/Figure.cpp || cmake_object_order_depends_target_Projekt
-  DEP_FILE = CMakeFiles\Projekt.dir\Figure.cpp.obj.d
+build CMakeFiles/Projekt.dir/model/Figure.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/model/Figure.cpp || cmake_object_order_depends_target_Projekt
+  DEP_FILE = CMakeFiles\Projekt.dir\model\Figure.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Projekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projekt.dir\model
 
 build CMakeFiles/Projekt.dir/Program.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/Program.cpp || cmake_object_order_depends_target_Projekt
   DEP_FILE = CMakeFiles\Projekt.dir\Program.cpp.obj.d
@@ -67,11 +67,17 @@ build CMakeFiles/Projekt.dir/Program.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Us
   OBJECT_DIR = CMakeFiles\Projekt.dir
   OBJECT_FILE_DIR = CMakeFiles\Projekt.dir
 
-build CMakeFiles/Projekt.dir/FigureSERVICE.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/FigureSERVICE.cpp || cmake_object_order_depends_target_Projekt
-  DEP_FILE = CMakeFiles\Projekt.dir\FigureSERVICE.cpp.obj.d
+build CMakeFiles/Projekt.dir/service/FigureSERVICE.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/service/FigureSERVICE.cpp || cmake_object_order_depends_target_Projekt
+  DEP_FILE = CMakeFiles\Projekt.dir\service\FigureSERVICE.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Projekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projekt.dir\service
+
+build CMakeFiles/Projekt.dir/service/cmdSERVICE.cpp.obj: CXX_COMPILER__Projekt_Debug C$:/Users/siemi/CLionProjects/Projekt/service/cmdSERVICE.cpp || cmake_object_order_depends_target_Projekt
+  DEP_FILE = CMakeFiles\Projekt.dir\service\cmdSERVICE.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projekt.dir\service
 
 
 # =============================================================================
@@ -81,7 +87,7 @@ build CMakeFiles/Projekt.dir/FigureSERVICE.cpp.obj: CXX_COMPILER__Projekt_Debug 
 #############################################
 # Link the executable Projekt.exe
 
-build Projekt.exe: CXX_EXECUTABLE_LINKER__Projekt_Debug CMakeFiles/Projekt.dir/main.cpp.obj CMakeFiles/Projekt.dir/Figure.cpp.obj CMakeFiles/Projekt.dir/Program.cpp.obj CMakeFiles/Projekt.dir/FigureSERVICE.cpp.obj
+build Projekt.exe: CXX_EXECUTABLE_LINKER__Projekt_Debug CMakeFiles/Projekt.dir/main.cpp.obj CMakeFiles/Projekt.dir/model/Figure.cpp.obj CMakeFiles/Projekt.dir/Program.cpp.obj CMakeFiles/Projekt.dir/service/FigureSERVICE.cpp.obj CMakeFiles/Projekt.dir/service/cmdSERVICE.cpp.obj
   FLAGS = -g
   LINK_FLAGS = -Wl,-Bstatic,--whole-archive -lwinpthread -Wl,--no-whole-archive
   LINK_LIBRARIES = -static-libgcc -static-libstdc++ -lwsock32 -lws2_32

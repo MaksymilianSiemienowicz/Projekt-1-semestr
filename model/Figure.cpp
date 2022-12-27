@@ -8,16 +8,20 @@ int Figure::getSizeOfFigure() {
     return sizeOfFigure;
 }
 
-void Figure::setSizeOfFigure(int sizeOfFigure) {
-    this->sizeOfFigure = sizeOfFigure;
+void Figure::incrementSize() {
+    sizeOfFigure += 1;
+}
+
+void Figure::decrementSize() {
+    sizeOfFigure -= 1;
 }
 
 char Figure::getCharOfFigure() {
     return charOfFigure;
 }
 
-void Figure::setCharOfFigure(char charOfFigure) {
-    this->charOfFigure = charOfFigure;
+void Figure::setCharOfFigure(char ii) {
+    charOfFigure = ii;
 
 }
 

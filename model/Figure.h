@@ -9,18 +9,20 @@
 class Figure {
 
 private:
-    int sizeOfFigure = 5;
-    char charOfFigure = '*';
+    char charOfFigure;
 
 public:
+    int sizeOfFigure;
     Figure(){
-
+        sizeOfFigure = 10;
+        charOfFigure = '*';
     }
 
     int getSizeOfFigure();
-    void setSizeOfFigure(int sizeOfFigure);
+    void incrementSize();
+    void decrementSize();
     char getCharOfFigure();
-    void setCharOfFigure(char charOfFigure);
+    void setCharOfFigure(char ii);
 
 };
 

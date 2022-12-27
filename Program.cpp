@@ -11,5 +11,4 @@ void Program::askForChar() {
     std::cin >> character;
 
     figure.setCharOfFigure(character);
-
 }

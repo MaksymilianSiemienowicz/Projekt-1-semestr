@@ -55,7 +55,8 @@
 				0,
 				1,
 				3,
-				5
+				5,
+				7
 			]
 		}
 	],
@@ -95,7 +96,8 @@
 				0,
 				1,
 				3,
-				5
+				5,
+				7
 			]
 		},
 		{
@@ -104,7 +106,8 @@
 			[
 				2,
 				4,
-				6
+				6,
+				8
 			]
 		}
 	],
@@ -119,12 +122,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Figure.cpp",
+			"path" : "model/Figure.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Figure.h",
+			"path" : "model/Figure.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -141,12 +144,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "FigureSERVICE.cpp",
+			"path" : "service/FigureSERVICE.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "FigureSERVICE.h",
+			"path" : "service/FigureSERVICE.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "service/cmdSERVICE.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "service/cmdSERVICE.h",
 			"sourceGroupIndex" : 1
 		}
 	],
