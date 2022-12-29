@@ -8,14 +8,15 @@
 #include <windows.h>
 
 
-class cmdSERVICE {
+class CmdSERVICE {
 private:
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    CONSOLE_SCREEN_BUFFER_INFO csbi; //Windows.h variable, need it to get window size
 
 
 public:
+    //Getters for X,Y window size
     int getConsoleWidth();
-    int getConoleHeight();
+    int getConsoleHeight();
 };
 
 

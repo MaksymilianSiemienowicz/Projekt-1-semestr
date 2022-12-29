@@ -5,36 +5,38 @@
 #ifndef PROJEKT_FIGURESERVICE_H
 #define PROJEKT_FIGURESERVICE_H
 #include "../model/Figure.h"
-#include "cmdSERVICE.h"
+#include "CmdSERVICE.h"
 
 class FigureSERVICE {
 private:
+    //Variables
     int spacesAmount = 20;
     int endlAmount = 10;
     int moveChar;
 
     Figure figure;
 
-    cmdSERVICE cmdService;
+    CmdSERVICE cmdService;
 
 public:
-    //CONSTRUCTOR/////////////////////////
+    //CONSTRUCTOR
     FigureSERVICE(Figure jeden){
         figure = jeden;
     }
-    //ALL ABOUT PRINTING FIGURE///////////
-    void askForChar(Figure jeden);
+
+    //Method which self defining themselves
+    void askForSize();
+    void askForChar();
     void printingFigure();
     void setStartSpacesAmount();
     void setStartEndlAmount();
     static void printingEndl(int endlAmount);
     static void printingSpaces(int spacesAmount);
-    //////////////////////////////////////
 
-    //ALL ABOUT MOVEMENT//////////////////
+
+    //Movement methods
     void setMoveChar();
     void moving();
-    //////////////////////////////////////
 
 };
 

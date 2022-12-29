@@ -4,6 +4,11 @@
 
 #include "Figure.h"
 
+void Figure::setSizeOfFigure(int sizeOfFigure) {
+    this->sizeOfFigure = sizeOfFigure;
+}
+
+
 int Figure::getSizeOfFigure() {
     return sizeOfFigure;
 }
@@ -20,8 +25,8 @@ char Figure::getCharOfFigure() {
     return charOfFigure;
 }
 
-void Figure::setCharOfFigure(char ii) {
-    charOfFigure = ii;
+void Figure::setCharOfFigure(char charOfFigure) {
+    this->charOfFigure = charOfFigure;
 
 }
 

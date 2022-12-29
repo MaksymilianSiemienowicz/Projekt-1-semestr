@@ -13,12 +13,13 @@ private:
     char charOfFigure = '*';
 
 public:
-
+    //Methods of FigureMODEL
+    void setSizeOfFigure(int sizeOfFigure);
     int getSizeOfFigure();
     void incrementSize();
     void decrementSize();
     char getCharOfFigure();
-    void setCharOfFigure(char ii);
+    void setCharOfFigure(char charOfFigure);
 
 };
 
