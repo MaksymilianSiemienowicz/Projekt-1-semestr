@@ -11,6 +11,7 @@ class FigureSERVICE {
 private:
     int spacesAmount = 20;
     int endlAmount = 10;
+    int moveChar;
 
     Figure figure;
 
@@ -22,6 +23,7 @@ public:
         figure = jeden;
     }
     //ALL ABOUT PRINTING FIGURE///////////
+    void askForChar(Figure jeden);
     void printingFigure();
     void setStartSpacesAmount();
     void setStartEndlAmount();
@@ -30,9 +32,8 @@ public:
     //////////////////////////////////////
 
     //ALL ABOUT MOVEMENT//////////////////
-    int moveChar();
+    void setMoveChar();
     void moving();
-    void changeSize();
     //////////////////////////////////////
 
 };

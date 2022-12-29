@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <conio.h>
 #include "model/Figure.h"
 #include "service/FigureSERVICE.h"
 
@@ -18,18 +19,18 @@ public:
         FigureSERVICE figureService(figure);
         figureService.setStartEndlAmount();
         figureService.setStartSpacesAmount();
-        askForChar();
+        figureService.askForChar(figure);
         system("cls");
+        figureService.printingFigure();
         for(;;) {
-            std::cout << figure.getSizeOfFigure();
-            figureService.printingFigure();
-            figureService.moveChar();
-            figureService.moving();
-           // figure.decrementSize();  /// to dziala -------- figureService.ChangeSize - nie dziala;
-            system("cls");
+            while(_kbhit()){
+                figureService.setMoveChar();
+                figureService.moving();
+                system("cls");
+                figureService.printingFigure();
+            }
         }
     }
-    void askForChar();
 };
 
 

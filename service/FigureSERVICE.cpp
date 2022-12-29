@@ -16,8 +16,14 @@
 
 
 ////DEFINE SETTERS AND GETTERS FOR SPACES AND ENDLINES
+void FigureSERVICE::askForChar(Figure figure1) {
+    char character;
+    std::cout << "Enter your Char from asci: ";
+    std::cin >> character;
+    figure.setCharOfFigure(character);
+}
 void FigureSERVICE::setStartEndlAmount() {
-    endlAmount = (cmdService.getConoleHeight()-figure.getSizeOfFigure())/2-2;
+    endlAmount = (cmdService.getConoleHeight()-figure.getSizeOfFigure())/2-5;
 }
 
 void FigureSERVICE::setStartSpacesAmount() {
@@ -66,13 +72,14 @@ void FigureSERVICE::printingFigure() {
 /////////////////////////////////////////////////////////////
 
 ///////MOVING////////////////////////////////////////////////
-int FigureSERVICE::moveChar() {
-    int c = _getch();
-    return c;
+void FigureSERVICE::setMoveChar() {
+    int c;
+    c = _getch();
+    moveChar = c;
 }
 
 void FigureSERVICE::moving(){
-    switch (moveChar()) {
+    switch (moveChar) {
         case KEY_UP:
             if(endlAmount > 1){
                 endlAmount--;
@@ -93,16 +100,27 @@ void FigureSERVICE::moving(){
                 spacesAmount++;
             }
             break;
-        case 49:
-            if(figure.getSizeOfFigure()+1 < cmdService.getConoleHeight()) {
-                if(endlAmount > 0){
+        case KEY_PLUS:
+            if(2*figure.getSizeOfFigure()+3 < cmdService.getConoleHeight()) {
+                if(endlAmount > 1){
                     endlAmount -=2;
+                    figure.incrementSize();
+                    if(cmdService.getConsoleWidth() - spacesAmount - figure.getSizeOfFigure() - 1 <= 0){
+                        spacesAmount--;
+                    }
                 }
-                figure.incrementSize();
+                else if(endlAmount == 1 &&2*figure.getSizeOfFigure()+2 < cmdService.getConoleHeight()){
+                    if(cmdService.getConsoleWidth() - spacesAmount - figure.getSizeOfFigure() - 1 <= 0){
+                        spacesAmount--;
+                    }
+                    endlAmount++;
+                    figure.incrementSize();
+                    endlAmount--;
+                }
             }
             break;
-        case 50:
-            if(figure.getSizeOfFigure() >= 0) {
+        case KEY_MINUS:
+            if(figure.getSizeOfFigure() > 0) {
                 figure.decrementSize();
             }
             break;

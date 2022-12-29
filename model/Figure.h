@@ -9,14 +9,10 @@
 class Figure {
 
 private:
-    char charOfFigure;
+   int sizeOfFigure = 10;
+    char charOfFigure = '*';
 
 public:
-    int sizeOfFigure;
-    Figure(){
-        sizeOfFigure = 10;
-        charOfFigure = '*';
-    }
 
     int getSizeOfFigure();
     void incrementSize();
