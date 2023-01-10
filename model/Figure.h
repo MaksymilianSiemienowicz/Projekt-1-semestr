@@ -23,5 +23,4 @@ public:
 
 };
 
-
 #endif //PROJEKT_FIGURE_H

@@ -20,11 +20,10 @@ private:
 
 public:
     //CONSTRUCTOR
-    FigureSERVICE(Figure jeden){
-        figure = jeden;
+    FigureSERVICE(Figure figure){
+        this->figure = figure;
     }
 
-    //Method which self defining themselves
     void askForSize();
     void askForChar();
     void printingFigure();
@@ -33,11 +32,11 @@ public:
     static void printingEndl(int endlAmount);
     static void printingSpaces(int spacesAmount);
 
-
     //Movement methods
     void setMoveChar();
     void moving();
 
+    void figureTerminalSizeCheck();
 };
 
 

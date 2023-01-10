@@ -25,20 +25,18 @@ public:
         figureService.askForSize();
         system("cls");
 
-        //Setting up figure in center of termianl window
+        //Setting up figure in center of terminal window
         figureService.setStartEndlAmount();
         figureService.setStartSpacesAmount();
         figureService.printingFigure();
         for(;;) {
-
+            figureService.figureTerminalSizeCheck();
             while(_kbhit()){
-                figureService.setMoveChar(); //Getting char form user
-                figureService.moving(); //moving or increase/decrease size of figure
-                system("cls"); // clearing window
-                figureService.printingFigure(); //printing figure again
-
+                figureService.setMoveChar();
+                figureService.moving();
+                system("cls");
+                figureService.printingFigure();
             }
-
         }
     }
 };
